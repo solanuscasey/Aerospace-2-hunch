@@ -1,0 +1,32 @@
+
+body{
+    font-size: large;
+    font-family: 'Franklin Gothic Medium';
+    background-color: rgb(0, 0, 0);
+    h1 {
+      text-align: center; 
+      color: rgb(111, 168, 220);
+    } 
+    p {
+      text-align: center; 
+      color: rgb(255, 255, 255);
+    }
+    
+}
+@keyframes background-pan {
+    from{
+      background-position: 0% center;
+    }
+    to{
+      background-position: -200% center;
+    }
+  }
+  .grad{
+     animation: background-pan 3s linear infinite;
+     background-image: linear-gradient(to right, green,lightgreen,darkgreen);
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     white-space: nowrap;
+     background-size: 200%;
+    }
