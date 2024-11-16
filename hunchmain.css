@@ -13,27 +13,26 @@ body{
     }
     
 }
-.wide{
-  display:block;
-  float:left;
-  margin:auto;
-  background-color: rgb(32, 32, 32);
-  padding:10px;
-    width: 98.5%;
+/* REPLACED THE WIDE AND COLUMNS */
+.grid{
+  display: grid;
+  /* USE A MOBILE GRID OF 1X1 */
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
 }
-.column {
-  display:block;
-  float:left;
-  width: 31.5%;
-  height: auto;
-  margin:auto;
-  margin-bottom: 1px;
-  padding: 0 8px;
-  border: 4px;
-  color: white;
-  border-style: solid;
-  overflow-wrap: normal;
+/* WHEN THE SCREEN-WIDTH IS TABLET SIZED OR GREATER BECOME A 3X3 GRID */
+@media (min-width: 768px) {
+  .grid{
+    grid-template-columns: auto auto auto;
+  }
+}
+.column{
   background-color: rgb(51, 68, 72);
+  border: 4px solid white;
+  color:white;
+  margin-bottom: 11px;
+  margin:10px;
+  padding: 2px;
 }
 .block {
   display: block;
