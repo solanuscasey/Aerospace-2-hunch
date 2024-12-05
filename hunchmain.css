@@ -1,96 +1,130 @@
 
 body{
-    font-size: large;
-    font-family: 'Franklin Gothic Medium';
-    background-color: rgb(0, 0, 0);
-    h1 {
-      text-align: center; 
-      color: rgb(111, 168, 220);
-    } 
-    p {
-      text-align: center; 
-      color: rgb(255, 255, 255);
-    }
-    
+  font-size: large;
+  font-family: 'Franklin Gothic Medium';
+  background-color: rgb(0, 0, 0);
+  h1 {
+    text-align: center; 
+    color: rgb(111, 168, 220);
+  } 
+  p {
+    text-align: center; 
+    color: rgb(255, 255, 255);
+  }
+  
 }
 /* REPLACED THE WIDE AND COLUMNS */
 .grid{
-  display: grid;
-  /* USE A MOBILE GRID OF 1X1 */
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
+display: grid;
+/* USE A MOBILE GRID OF 1X1 */
+grid-template-columns: auto;
+grid-template-rows: auto auto auto;
 }
 /* WHEN THE SCREEN-WIDTH IS TABLET SIZED OR GREATER BECOME A 3X3 GRID */
 @media (min-width: 768px) {
-  .grid{
-    grid-template-columns: auto auto auto;
-  }
+.grid{
+  grid-template-columns: auto auto auto;
+}
 }
 .column{
-  background-color: rgb(51, 68, 72);
-  border: 4px solid white;
-  color:white;
-  margin-bottom: 11px;
-  margin:10px;
-  padding: 2px;
+background-color: rgb(51, 68, 72);
+border: 4px solid white;
+color:white;
+margin-bottom: 11px;
+margin:10px;
+padding: 2px;
 }
 .block {
-  display: block;
-  width: 94.4%;
-  border: none;
-  background-color: #4c4c8e;
-  padding: 14px 28px;
-  color:azure;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
+display: block;
+width: 94.4%;
+border: none;
+background-color: #4c4c8e;
+padding: 14px 28px;
+color:azure;
+font-size: 16px;
+cursor: pointer;
+text-align: center;
 }
 .solocolumn {
-  display:block;
-  float:none;
-  width: 31%;
-  height: auto;
-  margin:auto;
-  margin-bottom: 1px;
-  padding: 0 8px;
-  border: 4px;
-  color: white;
-  border-style: solid;
-  overflow-wrap: normal;
-  background-color: rgb(51, 68, 72);
+display:block;
+float:none;
+width: 31%;
+height: auto;
+margin:auto;
+margin-bottom: 1px;
+padding: 0 8px;
+border: 4px;
+color: white;
+border-style: solid;
+overflow-wrap: normal;
+background-color: rgb(51, 68, 72);
 }
 img{
-  padding: 10px;
+padding: 10px;
 }
 .portrait{
-  display:block;
-  float:left;
-  padding: 30px;
-  width: 20%;
-  height: auto;
-  margin-bottom: 16px;
+display:block;
+float:left;
+padding: 30px;
+width: 20%;
+height: auto;
+margin-bottom: 16px;
 }
 .center{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 94.4%;
-  height: auto;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 90%;
+height: auto;
 }
+.dropbtn {
+background-color: #000000;
+color: white;
+padding: 16px;
+font-size: 16px;
+border: none;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: rgb(0, 0, 0);
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: rgb(255, 255, 255);
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {background-color: #7d7979;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3d3b3b;}
 @keyframes background-pan {
-    from{
-      background-position: 0% center;
-    }
-    to{
-      background-position: -200% center;
-    }
+  from{
+    background-position: 0% center;
   }
-  .grad{
-     animation: background-pan 3s linear infinite;
-     background-image: linear-gradient(to right, green,lightgreen,darkgreen);
-     -webkit-background-clip: text;
-     background-clip: text;
-     -webkit-text-fill-color: transparent;
-     white-space: nowrap;
-     background-size: 200%;
-    }
+  to{
+    background-position: -200% center;
+  }
+}
+.grad{
+   animation: background-pan 3s linear infinite;
+   background-image: linear-gradient(to right, green,lightgreen,darkgreen);
+   -webkit-background-clip: text;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+   white-space: nowrap;
+   background-size: 200%;
+  }
